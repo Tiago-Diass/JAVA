@@ -13,5 +13,11 @@ public class App {
         String nome = scanner.nextLine();
         System.out.println("Ola " + nome);
         scanner.close();
+        
+        Operacoes op = new Operacoes();
+        System.out.println(op.soma(2, 1));
+        System.out.println(op.subtracao(2, 1));
+        System.out.println(op.divisao(2, 1));
+        System.out.println(op.multiplicacao(2, 1));
     }
 }
