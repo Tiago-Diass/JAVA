@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
@@ -8,16 +9,30 @@ public class App {
         System.out.print("Numero 2: ");
         int num2 = scanner.nextInt();
         int sum = num1 + num2;
-        System.out.println("A soma dos dois: " + sum);*/
-        System.out.print("Teu nome: ");
+        System.out.println("A soma dos dois: " + sum); */
+        System.out.print("Teu nome: "); 
         String nome = scanner.nextLine();
         System.out.println("Ola " + nome);
-        scanner.close();
-        
-        Operacoes op = new Operacoes();
-        System.out.println(op.soma(2, 1));
-        System.out.println(op.subtracao(2, 1));
-        System.out.println(op.divisao(2, 1));
-        System.out.println(op.multiplicacao(2, 1));
+        scanner.close(); 
+    
+        Operacoes op = new Operacoes(); // classe Operacoes para usar seus métodos
+        System.out.println("\nSoma: " + op.soma(2, 1));
+        System.out.println("Subtração: " + op.subtracao(2, 1));
+        System.out.println("Divisão: " + op.divisao(2, 1));
+        System.out.println("Multiplicação: " + op.multiplicacao(2, 1));
+
+        // Modulos
+        Modulos modulo1 = new Modulos("Algoritmos", 20);
+        System.out.println("\nNota do módulo: " + modulo1.getNota());
+        modulo1.setNota(18);
+        System.out.println("Nota do módulo após alteração: " + modulo1.getNota());
+
+        ArrayList<Integer> notas = new ArrayList<Integer>();
+        notas.add(20);
+        notas.add(19);
+        notas.add(18);
+        notas.add(20);
+        notas.add(19);
+        System.out.println(notas);
     }
 }
